@@ -1,7 +1,7 @@
 # mbta-led
 
 ## Run Instructions:
-- Get API key from [api-v3.mbta.com]
+- Get API key from [the MBTA developer website](api-v3.mbta.com)
 - Paste key into `config.py`
 - Install requirements if necessary
   - ex: `pip install -r requirements.txt`
