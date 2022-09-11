@@ -8,14 +8,22 @@ from curses import wrapper
 
 
 def main(stdscr):
+    """
+    Loads the MBTA data and displays that data in a terminal window.
+    Passed as an argument into the curses wrapper function.
+    :param stdscr: A window object representing the screen; passed in by wrapper.
+    """
+    # load initial data (doesn't change over time)
     load_stops()
     load_routes()
+    # initialize stdscr
     curses.start_color()
-    while True:
-        stdscr.clear()
-        load_vehicles()
-        base_map = create_map()
+    stdscr.clear()
+    while True:  # main control loop
+        load_vehicles()  # get vehicle locations (needs to be in realtime)
+        base_map = create_map()  # create map (based on those vehicle locations)
         flicker_state = True
+        # initialize colors
         curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
         curses.init_pair(2, curses.COLOR_RED, curses.COLOR_BLACK)
         curses.init_pair(3, curses.COLOR_YELLOW, curses.COLOR_BLACK)
@@ -27,7 +35,7 @@ def main(stdscr):
             'o': 3,
             'b': 4
         }
-        for i in range(6):
+        for _ in range(6):
             stdscr.clear()
             flickered_map = flicker_map(base_map, flicker_state)
             for char in flickered_map:
