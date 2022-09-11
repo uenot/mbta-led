@@ -1,6 +1,7 @@
 #include <iostream>
 #include "led-matrix.h"
 #include <unistd.h>
+#include "driver.h"
 
 using namespace rgb_matrix;
 
