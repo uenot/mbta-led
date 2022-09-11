@@ -1,6 +1,7 @@
 CXXFLAGS=-O3
 OBJECTS=driver.o
 BINARIES=driver
+LIBS=driver.so
 
 RGB_LIB_DISTRIBUTION=matrix
 RGB_INCDIR=$(RGB_LIB_DISTRIBUTION)/include
@@ -12,6 +13,9 @@ LDFLAGS+=-L$(RGB_LIBDIR) -l$(RGB_LIBRARY_NAME) -lrt -lm -lpthread
 $(RGB_LIBRARY):
 	$(MAKE) -C $(RGB_LIBDIR)
 
+driver.so: $(OBJECTS) $(RGB_LIBRARY)
+	$(LINK.c) -shared $^ -o $@
+
 driver: $(OBJECTS) $(RGB_LIBRARY)
 	$(CXX) $(CXXFLAGS) $(OBJECTS) -o $@ $(LDFLAGS)
 
@@ -19,4 +23,4 @@ driver.o: driver.cpp
 	$(CXX) -I$(RGB_INCDIR) $(CXXFLAGS) -c -o $@ $<
 
 clean:
-	rm -f $(OBJECTS) $(BINARIES)
+	rm -f $(OBJECTS) $(BINARIES) $(LIBS)
