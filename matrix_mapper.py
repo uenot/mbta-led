@@ -93,6 +93,11 @@ for vehicle, vehicle_info in vehicles.items():
             continue
 	print(info)
         if vehicle_info['current_status'] in ['IN_TRANSIT_TO', 'INCOMING_AT']:
-            matrix.set_pixel(info[0], info[1], colors[info[2]][0], colors[info[2]][1], colors[info[2]][2])
+            flash = True
+        else:
+            flash = False
+        matrix.set_pixel(info[0], info[1], colors[info[2]][0], colors[info[2]][1], colors[info[2]][2], flash=flash)
 
-time.sleep(3)
+matrix.run_cycle()
+
+
