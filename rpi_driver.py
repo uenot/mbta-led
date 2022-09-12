@@ -18,9 +18,7 @@ if __name__ == "__main__":
         stops = json.load(f)
 
     while True:
-        load_vehicles()
-        with open('data/vehicles.json') as f:
-            vehicles = json.load(f)
+        vehicles = load_vehicles(void=False)
         
         for vehicle, vehicle_info in vehicles.items():
             stop = vehicle_info['stop']

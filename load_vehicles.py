@@ -4,7 +4,7 @@ import os
 import config
 
 
-def load_vehicles():
+def load_vehicles(void=True):
     # errors if file doesn't exist
     with open('data/routes.json') as f:
         routes = json.load(f)
@@ -22,10 +22,13 @@ def load_vehicles():
             vehicle_data['stop'] = None
         formatted[vehicle['id']] = vehicle_data
 
-    if not os.path.exists('data'):
-        os.makedirs('data')
-    with open('data/vehicles.json', 'w') as f:
-        json.dump(formatted, f, indent=2)
+    if void:
+        if not os.path.exists('data'):
+            os.makedirs('data')
+        with open('data/vehicles.json', 'w') as f:
+            json.dump(formatted, f, indent=2)
+    else:
+        return formatted
 
 
 if __name__ == "__main__":
