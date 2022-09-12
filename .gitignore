@@ -8,3 +8,6 @@
 
 # Ignore libraries:
 *.so
+
+config.py
+data/
