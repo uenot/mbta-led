@@ -9,7 +9,7 @@ def load_vehicles():
     with open('data/routes.json') as f:
         routes = json.load(f)
 
-    response = requests.get(f'https://api-v3.mbta.com/vehicles?api_key={config.key}&filter[route_type]=0,1')
+    response = requests.get(f"https://api-v3.mbta.com/vehicles?api_key={config.key}&filter[route_type]=0,1")
     data = response.json()['data']
     formatted = {}
     for vehicle in data:

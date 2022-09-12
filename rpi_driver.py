@@ -9,7 +9,7 @@ class Matrix:
 		self.canvas = self.matrix.CreateFrameCanvas()
 
 	def set_pixel(self, x, y, r, g, b):
-		self.matrix.setPixel(x, y, r, g, b)
+		self.matrix.SetPixel(x, y, r, g, b)
 
 	def clear(self):
 		self.matrix.Clear()

@@ -1,5 +1,6 @@
 from rpi_driver import *
 import json
+import time
 
 stop_coordinates = {
     70036: (39, 2, "orange"),
@@ -87,8 +88,11 @@ for vehicle, vehicle_info in vehicles.items():
     stop = vehicle_info['stop']
     if stop is not None:
         try:
-            info = stop_coordinates[stop]
-        except KeyError:
+            info = stop_coordinates[int(stop)]
+        except:
             continue
+	print(info)
         if vehicle_info['current_status'] in ['IN_TRANSIT_TO', 'INCOMING_AT']:
             matrix.set_pixel(info[0], info[1], colors[info[2]][0], colors[info[2]][1], colors[info[2]][2])
+
+time.sleep(3)
