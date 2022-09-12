@@ -1,26 +1,23 @@
-import time
-from rgbmatrix import RGBMatrix, RGBMatrixOptions
+matrix = Matrix()
 
-class Matrix:
-	def __init__(self):
-		options = RGBMatrixOptions()
-		options.rows = 64
-		options.cols = 64
-		self.matrix = RGBMatrix(options=options)
-		self.base_canvas = self.matrix.CreateFrameCanvas()
-		self.flash_canvas = self.matrix.CreateFrameCanvas()
+with open('data/vehicles.json') as f:
+    vehicles = json.load(f)
 
-	def set_pixel(self, x, y, r, g, b, flash=False):
-		if not flash:
-			self.flash_canvas.SetPixel(x, y, r, g, b)
-		self.base_canvas.SetPixel(x, y, r, g, b)
+with open('data/stops.json') as f:
+    stops = json.load(f)
 
-	def run_cycle(self):
-		for _ in range(3):
-			self.matrix.SwapOnVSync(self.flash_canvas)
-			time.sleep(1)
-			self.matrix.SwapOnVSync(self.base_canvas)
-			time.sleep(1)
+for vehicle, vehicle_info in vehicles.items():
+    stop = vehicle_info['stop']
+    if stop is not None:
+        try:
+            info = stop_coordinates[int(stop)]
+        except:
+            continue
+        if vehicle_info['current_status'] in ['IN_TRANSIT_TO', 'INCOMING_AT']:
+            flash = True
+        else:
+            flash = False
+        matrix.set_pixel(info[0], info[1], colors[info[2]][0], colors[info[2]][1], colors[info[2]][2], flash=flash)
 
-	def clear(self):
-		self.matrix.Clear()
+matrix.run_cycle()
+
