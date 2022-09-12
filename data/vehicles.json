@@ -1,249 +1,249 @@
 {
   "G-10129": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 0,
-    "route": "Green-B",
-    "stop": "70131"
-  },
-  "B-54729FED": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 1,
-    "route": "Blue",
-    "stop": "70052"
-  },
-  "R-5472993D": {
-    "current_status": "IN_TRANSIT_TO",
-    "direction_id": 0,
-    "route": "Red",
-    "stop": "70097"
-  },
-  "G-10086": {
     "current_status": "STOPPED_AT",
     "direction_id": 0,
+    "route": "Green-B",
+    "stop": "70107"
+  },
+  "B-54729FED": {
+    "current_status": "STOPPED_AT",
+    "direction_id": 1,
+    "route": "Blue",
+    "stop": "70038"
+  },
+  "G-10086": {
+    "current_status": "INCOMING_AT",
+    "direction_id": 1,
     "route": "Green-C",
-    "stop": "70235"
+    "stop": "70156"
   },
   "R-5472956D": {
-    "current_status": "IN_TRANSIT_TO",
-    "direction_id": 0,
+    "current_status": "STOPPED_AT",
+    "direction_id": 1,
     "route": "Red",
-    "stop": "70081"
+    "stop": "70104"
   },
-  "G-10200": {
-    "current_status": "IN_TRANSIT_TO",
+  "G-10017": {
+    "current_status": "INCOMING_AT",
     "direction_id": 1,
     "route": "Green-B",
-    "stop": null
+    "stop": "70120"
   },
   "G-10002": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 0,
+    "current_status": "STOPPED_AT",
+    "direction_id": 1,
     "route": "Green-E",
-    "stop": "70260"
+    "stop": "70200"
   },
-  "G-10196": {
+  "G-10200": {
     "current_status": "INCOMING_AT",
-    "direction_id": 0,
-    "route": "Green-D",
-    "stop": "70187"
+    "direction_id": 1,
+    "route": "Green-B",
+    "stop": "70124"
   },
   "G-10203": {
     "current_status": "STOPPED_AT",
     "direction_id": 0,
     "route": "Green-D",
-    "stop": "70202"
+    "stop": "70161"
   },
   "R-5472947C": {
-    "current_status": "IN_TRANSIT_TO",
+    "current_status": "INCOMING_AT",
+    "direction_id": 1,
+    "route": "Red",
+    "stop": "70096"
+  },
+  "G-10078": {
+    "current_status": "STOPPED_AT",
+    "direction_id": 1,
+    "route": "Green-E",
+    "stop": "70260"
+  },
+  "G-10145": {
+    "current_status": "STOPPED_AT",
+    "direction_id": 1,
+    "route": "Green-B",
+    "stop": "71150"
+  },
+  "B-54729FEF": {
+    "current_status": "INCOMING_AT",
+    "direction_id": 1,
+    "route": "Blue",
+    "stop": "70054"
+  },
+  "G-10124": {
+    "current_status": "INCOMING_AT",
+    "direction_id": 0,
+    "route": "Green-C",
+    "stop": "70229"
+  },
+  "G-10177": {
+    "current_status": "INCOMING_AT",
+    "direction_id": 0,
+    "route": "Green-B",
+    "stop": "70147"
+  },
+  "G-10012": {
+    "current_status": "INCOMING_AT",
+    "direction_id": 1,
+    "route": "Green-E",
+    "stop": "70244"
+  },
+  "G-10201": {
+    "current_status": "STOPPED_AT",
+    "direction_id": 0,
+    "route": "Green-B",
+    "stop": "70117"
+  },
+  "R-54729B88": {
+    "current_status": "INCOMING_AT",
     "direction_id": 0,
     "route": "Red",
     "stop": "70103"
   },
-  "G-10078": {
-    "current_status": "IN_TRANSIT_TO",
-    "direction_id": 1,
-    "route": "Green-E",
-    "stop": null
-  },
-  "G-10145": {
-    "current_status": "IN_TRANSIT_TO",
-    "direction_id": 1,
-    "route": "Green-B",
-    "stop": null
-  },
-  "B-54729FEF": {
-    "current_status": "STOPPED_AT",
-    "direction_id": 1,
-    "route": "Blue",
-    "stop": "70060"
-  },
-  "G-10177": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 1,
-    "route": "Green-B",
-    "stop": "70144"
-  },
-  "G-10124": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 1,
-    "route": "Green-C",
-    "stop": "70154"
-  },
-  "G-10012": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 0,
-    "route": "Green-E",
-    "stop": "70241"
-  },
-  "G-10201": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 1,
-    "route": "Green-B",
-    "stop": "70158"
-  },
-  "R-54729B88": {
-    "current_status": "STOPPED_AT",
-    "direction_id": 0,
-    "route": "Red",
-    "stop": "70065"
-  },
-  "G-10105": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 1,
-    "route": "Green-D",
-    "stop": "70164"
-  },
   "R-5472A173": {
     "current_status": "IN_TRANSIT_TO",
-    "direction_id": 0,
+    "direction_id": 1,
     "route": "Red",
-    "stop": "70071"
+    "stop": "70094"
+  },
+  "G-10105": {
+    "current_status": "IN_TRANSIT_TO",
+    "direction_id": 0,
+    "route": "Green-D",
+    "stop": "70202"
   },
   "G-10084": {
+    "current_status": "INCOMING_AT",
+    "direction_id": 0,
+    "route": "Mattapan",
+    "stop": "70275"
+  },
+  "G-10098": {
     "current_status": "IN_TRANSIT_TO",
     "direction_id": 1,
-    "route": "Mattapan",
-    "stop": "70264"
+    "route": "Green-D",
+    "stop": "70154"
   },
-  "G-10007": {
+  "G-10049": {
     "current_status": "STOPPED_AT",
     "direction_id": 0,
     "route": "Green-C",
-    "stop": "70151"
+    "stop": "70155"
+  },
+  "G-10007": {
+    "current_status": "INCOMING_AT",
+    "direction_id": 1,
+    "route": "Green-C",
+    "stop": "70230"
   },
   "R-54729FC6": {
     "current_status": "STOPPED_AT",
     "direction_id": 0,
     "route": "Red",
-    "stop": "Alewife-02"
+    "stop": "70083"
   },
-  "G-10016": {
+  "G-10184": {
+    "current_status": "IN_TRANSIT_TO",
+    "direction_id": 1,
+    "route": "Green-B",
+    "stop": null
+  },
+  "R-54729F28": {
+    "current_status": "INCOMING_AT",
+    "direction_id": 1,
+    "route": "Red",
+    "stop": "70066"
+  },
+  "R-5472987F": {
+    "current_status": "STOPPED_AT",
+    "direction_id": 1,
+    "route": "Red",
+    "stop": "70088"
+  },
+  "G-10087": {
+    "current_status": "STOPPED_AT",
+    "direction_id": 1,
+    "route": "Green-D",
+    "stop": "70174"
+  },
+  "G-10182": {
+    "current_status": "STOPPED_AT",
+    "direction_id": 1,
+    "route": "Green-C",
+    "stop": "70212"
+  },
+  "G-10077": {
     "current_status": "INCOMING_AT",
     "direction_id": 0,
     "route": "Green-B",
-    "stop": "70149"
+    "stop": "70153"
   },
-  "R-54729F28": {
+  "R-5472A048": {
+    "current_status": "INCOMING_AT",
+    "direction_id": 0,
+    "route": "Red",
+    "stop": "70063"
+  },
+  "R-5472A169": {
     "current_status": "STOPPED_AT",
     "direction_id": 1,
     "route": "Red",
     "stop": "70094"
   },
-  "R-5472987F": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 0,
-    "route": "Red",
-    "stop": "70093"
-  },
-  "G-10182": {
-    "current_status": "STOPPED_AT",
-    "direction_id": 0,
-    "route": "Green-C",
-    "stop": "70217"
-  },
-  "G-10077": {
-    "current_status": "STOPPED_AT",
-    "direction_id": 1,
-    "route": "Green-B",
-    "stop": "70134"
-  },
-  "R-5472A169": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 0,
-    "route": "Red",
-    "stop": "70085"
-  },
-  "R-5472A048": {
-    "current_status": "IN_TRANSIT_TO",
-    "direction_id": 1,
-    "route": "Red",
-    "stop": "70074"
-  },
   "G-10115": {
-    "current_status": "IN_TRANSIT_TO",
-    "direction_id": 1,
+    "current_status": "INCOMING_AT",
+    "direction_id": 0,
     "route": "Green-D",
-    "stop": "70172"
+    "stop": "70157"
   },
   "R-54729FFF": {
     "current_status": "STOPPED_AT",
-    "direction_id": 1,
+    "direction_id": 0,
     "route": "Red",
-    "stop": "70070"
+    "stop": "70075"
   },
-  "G-10059": {
+  "G-10120": {
     "current_status": "IN_TRANSIT_TO",
-    "direction_id": 0,
-    "route": "Green-D",
-    "stop": "70173"
-  },
-  "G-10037": {
-    "current_status": "STOPPED_AT",
-    "direction_id": 0,
-    "route": "Mattapan",
-    "stop": "70267"
-  },
-  "G-10207": {
-    "current_status": "STOPPED_AT",
-    "direction_id": 0,
-    "route": "Green-B",
-    "stop": "70107"
-  },
-  "G-10001": {
-    "current_status": "STOPPED_AT",
-    "direction_id": 0,
-    "route": "Green-B",
-    "stop": "70107"
-  },
-  "G-10027": {
-    "current_status": "IN_TRANSIT_TO",
-    "direction_id": 0,
-    "route": "Green-D",
-    "stop": "70153"
-  },
-  "G-10204": {
-    "current_status": "STOPPED_AT",
     "direction_id": 0,
     "route": "Green-C",
     "stop": "70157"
   },
-  "G-10186": {
+  "G-10037": {
+    "current_status": "INCOMING_AT",
+    "direction_id": 1,
+    "route": "Mattapan",
+    "stop": "70266"
+  },
+  "G-10168": {
     "current_status": "IN_TRANSIT_TO",
-    "direction_id": 0,
+    "direction_id": 1,
     "route": "Green-B",
-    "stop": "70157"
+    "stop": null
+  },
+  "G-10027": {
+    "current_status": "STOPPED_AT",
+    "direction_id": 0,
+    "route": "Green-D",
+    "stop": "70161"
   },
   "G-10197": {
-    "current_status": "STOPPED_AT",
-    "direction_id": 1,
+    "current_status": "IN_TRANSIT_TO",
+    "direction_id": 0,
     "route": "Green-D",
-    "stop": "70186"
+    "stop": "70177"
+  },
+  "G-10186": {
+    "current_status": "STOPPED_AT",
+    "direction_id": 0,
+    "route": "Green-B",
+    "stop": "70107"
   },
   "B-54729FEC": {
     "current_status": "IN_TRANSIT_TO",
     "direction_id": 0,
     "route": "Blue",
-    "stop": "70043"
+    "stop": "70059"
   },
   "G-10158": {
     "current_status": "INCOMING_AT",
@@ -251,76 +251,70 @@
     "route": "Green-E",
     "stop": "70244"
   },
-  "G-10004": {
-    "current_status": "STOPPED_AT",
-    "direction_id": 1,
-    "route": "Green-B",
-    "stop": "70114"
-  },
   "G-10135": {
     "current_status": "INCOMING_AT",
-    "direction_id": 1,
+    "direction_id": 0,
     "route": "Green-D",
-    "stop": "70158"
+    "stop": "70169"
+  },
+  "G-10004": {
+    "current_status": "INCOMING_AT",
+    "direction_id": 0,
+    "route": "Green-B",
+    "stop": "70196"
   },
   "G-10035": {
-    "current_status": "STOPPED_AT",
-    "direction_id": 1,
+    "current_status": "IN_TRANSIT_TO",
+    "direction_id": 0,
     "route": "Green-C",
-    "stop": "70218"
+    "stop": "70211"
   },
   "R-54729F6C": {
     "current_status": "IN_TRANSIT_TO",
     "direction_id": 1,
     "route": "Red",
-    "stop": "70096"
-  },
-  "R-54729CE5": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 1,
-    "route": "Red",
-    "stop": "70072"
+    "stop": "70061"
   },
   "R-54729E1F": {
-    "current_status": "STOPPED_AT",
+    "current_status": "IN_TRANSIT_TO",
     "direction_id": 1,
     "route": "Red",
-    "stop": "Braintree-01"
+    "stop": "70074"
+  },
+  "R-54729CE5": {
+    "current_status": "IN_TRANSIT_TO",
+    "direction_id": 0,
+    "route": "Red",
+    "stop": "70069"
   },
   "R-5472A085": {
     "current_status": "STOPPED_AT",
-    "direction_id": 1,
+    "direction_id": 0,
     "route": "Red",
-    "stop": "70088"
+    "stop": "Alewife-02"
   },
   "G-10051": {
     "current_status": "INCOMING_AT",
-    "direction_id": 1,
-    "route": "Green-E",
-    "stop": "70242"
-  },
-  "G-10198": {
-    "current_status": "INCOMING_AT",
     "direction_id": 0,
-    "route": "Green-D",
-    "stop": "70167"
+    "route": "Green-E",
+    "stop": "70255"
   },
   "R-54729E95": {
     "current_status": "STOPPED_AT",
-    "direction_id": 0,
+    "direction_id": 1,
     "route": "Red",
-    "stop": "70093"
+    "stop": "70078"
   },
   "R-5472A1B2": {
-    "current_status": "STOPPED_AT",
+    "current_status": "INCOMING_AT",
     "direction_id": 0,
     "route": "Red",
-    "stop": "Alewife-01"
+    "stop": "70089"
   },
   "B-54729FEB": {
-    "current_status": "INCOMING_AT",
-    "direction_id": 1,
+    "current_status": "IN_TRANSIT_TO",
+    "direction_id": 0,
     "route": "Blue",
-    "stop": "70040"
+    "stop": "70043"
   }
 }
