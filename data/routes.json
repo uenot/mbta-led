@@ -1,0 +1,66 @@
+{
+  "Red": {
+    "direction_destinations": [
+      "Ashmont/Braintree",
+      "Alewife"
+    ],
+    "color": "DA291C",
+    "long_name": "Red Line"
+  },
+  "Mattapan": {
+    "direction_destinations": [
+      "Mattapan",
+      "Ashmont"
+    ],
+    "color": "DA291C",
+    "long_name": "Mattapan Trolley"
+  },
+  "Orange": {
+    "direction_destinations": [
+      "Forest Hills",
+      "Oak Grove"
+    ],
+    "color": "ED8B00",
+    "long_name": "Orange Line"
+  },
+  "Green-B": {
+    "direction_destinations": [
+      "Boston College",
+      "Government Center"
+    ],
+    "color": "00843D",
+    "long_name": "Green Line B"
+  },
+  "Green-C": {
+    "direction_destinations": [
+      "Cleveland Circle",
+      "Government Center"
+    ],
+    "color": "00843D",
+    "long_name": "Green Line C"
+  },
+  "Green-D": {
+    "direction_destinations": [
+      "Riverside",
+      "North Station"
+    ],
+    "color": "00843D",
+    "long_name": "Green Line D"
+  },
+  "Green-E": {
+    "direction_destinations": [
+      "Heath Street",
+      "Union Square"
+    ],
+    "color": "00843D",
+    "long_name": "Green Line E"
+  },
+  "Blue": {
+    "direction_destinations": [
+      "Bowdoin",
+      "Wonderland"
+    ],
+    "color": "003DA5",
+    "long_name": "Blue Line"
+  }
+}

@@ -8,8 +8,8 @@ class Matrix:
 		self.matrix = RGBMatrix(options=options)
 		self.canvas = self.matrix.CreateFrameCanvas()
 
-	def set_pixel(x, y, r, g, b):
-		matrix.setPixel(x, y, r, g, b)
+	def set_pixel(self, x, y, r, g, b):
+		self.matrix.setPixel(x, y, r, g, b)
 
-	def clear():
-		matrix.Clear()
+	def clear(self):
+		self.matrix.Clear()
