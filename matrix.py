@@ -9,6 +9,7 @@ class Matrix:
 		self.matrix = RGBMatrix(options=options)
 		self.base_canvas = self.matrix.CreateFrameCanvas()
 		self.flash_canvas = self.matrix.CreateFrameCanvas()
+		self.empty_canvas = self.matrix.CreateFrameCanvas()
 
 	def set_pixel(self, x, y, r, g, b, flash=False):
 		if not flash:
@@ -16,7 +17,7 @@ class Matrix:
 		self.base_canvas.SetPixel(x, y, r, g, b)
 
 	def run_cycle(self):
-		for _ in range(3):
+		for _ in range(2):
 			self.matrix.SwapOnVSync(self.flash_canvas)
 			time.sleep(1)
 			self.matrix.SwapOnVSync(self.base_canvas)
@@ -24,8 +25,9 @@ class Matrix:
 		self.clear_canvases()
 
 	def clear_canvases(self):
+		self.matrix.SwapOnVSync(self.empty_canvas)
 		self.flash_canvas.Clear()
 		self.base_canvas.Clear()
-		
+
 	def clear(self):
 		self.matrix.Clear()
