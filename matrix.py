@@ -22,7 +22,12 @@ class Matrix:
 			time.sleep(1)
 			self.matrix.SwapOnVSync(self.base_canvas)
 			time.sleep(1)
-		self.clear_canvases()
+		self.matrix.SwapOnVSync(self.flash_canvas)
+		self.base_canvas.clear()
+		time.sleep(1)
+		self.matrix.SwapOnVSync(self.base_canvas)
+		self.flash_canvas.clear()
+		time.sleep(1)
 
 	def clear_canvases(self):
 		self.matrix.SwapOnVSync(self.empty_canvas)
