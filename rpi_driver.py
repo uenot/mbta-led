@@ -1,16 +1,13 @@
 from matrix import Matrix
 from matrix_mapper_info import *
 from load_stops import load_stops
-from load_routes import load_routes
 from load_vehicles import load_vehicles
 import json
-import time
 
 
 if __name__ == "__main__":
     
     load_stops()
-    load_routes()
 
     matrix = Matrix()
 

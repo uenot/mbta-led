@@ -5,9 +5,6 @@ import config
 
 
 def load_vehicles(void=True):
-    # errors if file doesn't exist
-    with open('data/routes.json') as f:
-        routes = json.load(f)
 
     response = requests.get(f"https://api-v3.mbta.com/vehicles?api_key={config.key}&filter[route_type]=0,1")
     data = response.json()['data']

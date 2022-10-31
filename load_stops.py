@@ -14,7 +14,9 @@ def load_stops():
     formatted = {}
     for stop in data:
         keys = ['name', 'platform_name', 'description']
-        formatted[stop['id']] = {k: stop['attributes'][k] for k in keys}
+        stop_data = {k: stop['attributes'][k] for k in keys}
+        stop_data['line'] = stop_data['description'].split(' - ')[1].split(' ')[0]
+        formatted[stop['id']] = stop_data
 
     if not os.path.exists('data'):
         os.makedirs('data')

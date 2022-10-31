@@ -1,5 +1,4 @@
 from load_stops import *
-from load_routes import *
 from load_vehicles import *
 from map import *
 import time
@@ -15,7 +14,6 @@ def main(stdscr):
     """
     # load initial data (doesn't change over time)
     load_stops()
-    load_routes()
     # initialize stdscr
     curses.start_color()
     stdscr.clear()
