@@ -24,8 +24,8 @@ if __name__ == "__main__":
                 stop = vehicle_info['stop']
                 if stop is not None:
                     try:
-                        x, y = stop_coordinates[int(stop)]
-                    except:
+                        x, y = stop_coordinates[stops[stop]['name']]
+                    except KeyError:
                         continue
                     if vehicle_info['current_status'] in ['IN_TRANSIT_TO', 'INCOMING_AT']:
                         flash = True
