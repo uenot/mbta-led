@@ -3,7 +3,6 @@ import json
 import os
 import config
 
-
 def load_stops():
     response = requests.get(f'https://api-v3.mbta.com/stops?api_key={config.key}&filter[route_type]=0,1')
     data = response.json()['data']
