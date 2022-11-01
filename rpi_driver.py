@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     try:
         while True:
-            vehicles = load_vehicles(void=False)
+            vehicles = load_vehicles()
 
             set_pixels = set()
             
