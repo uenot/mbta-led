@@ -9,7 +9,10 @@ if __name__ == "__main__":
     stops = load_stops()
 
     for _, stop in stops.items():
-        x, y = stop_coordinates[stop['name']]
+        try:
+            x, y = stop_coordinates[stop['name']]
+        except KeyError:
+            continue
         for i in range(-1, 2, 2):
             for j in range(-1, 2, 2):
                 text.append((x+i, y+j))
