@@ -1,18 +1,15 @@
 from matrix import Matrix
-from matrix_mapper_info import stop_coordinates, colors
-from load_stops import load_stops
+from matrix_mapper_info import stop_coordinates, colors, text
+from load import load_stops
 from load_vehicles import load_vehicles
 import json
 
 
 if __name__ == "__main__":
     
-    load_stops()
+    stops = load_stops()
 
-    matrix = Matrix()
-
-    with open('data/stops.json') as f:
-        stops = json.load(f)
+    matrix = Matrix(default=text)
 
     try:
         while True:

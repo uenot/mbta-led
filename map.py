@@ -1,16 +1,15 @@
 import json
 import re
 
+from load import load_stops, load_vehicles
+
 
 def create_map():
     with open('map.txt') as f:
         mbta_map = f.read()
 
-    with open('data/vehicles.json') as f:
-        vehicles = json.load(f)
-
-    with open('data/stops.json') as f:
-        stops = json.load(f)
+    vehicles = load_vehicles()
+    stops = load_stops()
 
     for vehicle, vehicle_info in vehicles.items():
         stop = vehicle_info['stop']
