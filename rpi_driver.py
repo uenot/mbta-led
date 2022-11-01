@@ -13,9 +13,8 @@ if __name__ == "__main__":
             x, y = stop_coordinates[stop['name']]
         except KeyError:
             continue
-        for i in range(-1, 2, 2):
-            for j in range(-1, 2, 2):
-                text.append((x+i, y+j))
+        for border in [(x+1, y), (x-1, y) (x, y+1), (x, y-1)]:
+            text.append(border)
 
 
     matrix = Matrix(default=text)
