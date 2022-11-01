@@ -13,7 +13,7 @@ if __name__ == "__main__":
             x, y = stop_coordinates[stop['name']]
         except KeyError:
             continue
-        for border in [(x+1, y), (x-1, y) (x, y+1), (x, y-1)]:
+        for border in [(x+1, y), (x-1, y), (x, y+1), (x, y-1)]:
             text.append(border)
 
 
