@@ -3,10 +3,6 @@ import json
 import os
 import config
 
-# errors if file doesn't exist
-with open('data/routes.json') as f:
-    routes = json.load(f)
-
 
 def load_stops():
     response = requests.get(f'https://api-v3.mbta.com/stops?api_key={config.key}&filter[route_type]=0,1')
