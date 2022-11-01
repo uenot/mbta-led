@@ -8,6 +8,13 @@ if __name__ == "__main__":
     
     stops = load_stops()
 
+    for _, stop in stops.items():
+        x, y = stop_coordinates[stop['name']]
+        for i in range(-1, 2, 2):
+            for j in range(-1, 2, 2):
+                text.append((x+i, y+j))
+
+
     matrix = Matrix(default=text)
 
     try:
