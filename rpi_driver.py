@@ -1,7 +1,6 @@
 from matrix import Matrix
 from matrix_mapper_info import stop_coordinates, colors, text
-from load import load_stops
-from load_vehicles import load_vehicles
+from load import load_stops, load_vehicles
 import json
 
 
