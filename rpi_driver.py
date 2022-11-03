@@ -1,12 +1,14 @@
 from matrix import Matrix
-from matrix_mapper_info import stop_coordinates, colors, text
-from load import load_stops, load_vehicles
+from load import *
 import json
 
 
 if __name__ == "__main__":
     
     stops = load_stops()
+    stop_coordinates = load_stop_coords()
+    colors = load_colors()
+    text = load_text()
 
     for _, stop in stops.items():
         try:

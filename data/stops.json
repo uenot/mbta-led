@@ -1,0 +1,474 @@
+{
+  "Wonderland": [
+    61,
+    6
+  ],
+  "Revere Beach": [
+    59,
+    8
+  ],
+  "Beachmont": [
+    57,
+    10
+  ],
+  "Suffolk Downs": [
+    55,
+    12
+  ],
+  "Orient Heights": [
+    53,
+    14
+  ],
+  "Wood Island": [
+    51,
+    16
+  ],
+  "Airport": [
+    49,
+    18
+  ],
+  "Maverick": [
+    47,
+    20
+  ],
+  "Aquarium": [
+    44,
+    23
+  ],
+  "State": [
+    42,
+    25
+  ],
+  "Government Center": [
+    40,
+    23
+  ],
+  "Bowdoin": [
+    38,
+    21
+  ],
+  "Oak Grove": [
+    42,
+    2
+  ],
+  "Malden Center": [
+    42,
+    4
+  ],
+  "Wellington": [
+    42,
+    6
+  ],
+  "Assembly": [
+    42,
+    8
+  ],
+  "Sullivan": [
+    42,
+    10
+  ],
+  "Community College": [
+    42,
+    12
+  ],
+  "North Station": [
+    42,
+    18
+  ],
+  "Haymarket": [
+    42,
+    20
+  ],
+  "Downtown Crossing": [
+    40,
+    27
+  ],
+  "Chinatown": [
+    38,
+    29
+  ],
+  "Tufts Medical Center": [
+    36,
+    31
+  ],
+  "Back Bay": [
+    34,
+    33
+  ],
+  "Massachusetts Avenue": [
+    32,
+    35
+  ],
+  "Ruggles": [
+    30,
+    37
+  ],
+  "Roxbury Crossing": [
+    28,
+    39
+  ],
+  "Jackson Square": [
+    26,
+    41
+  ],
+  "Stony Brook": [
+    24,
+    43
+  ],
+  "Green Street": [
+    22,
+    45
+  ],
+  "Forest Hills": [
+    20,
+    47
+  ],
+  "Alewife": [
+    22,
+    9
+  ],
+  "Davis": [
+    24,
+    11
+  ],
+  "Porter": [
+    26,
+    13
+  ],
+  "Harvard": [
+    28,
+    15
+  ],
+  "Central": [
+    30,
+    17
+  ],
+  "Kendall/MIT": [
+    32,
+    19
+  ],
+  "Charles/MGH": [
+    36,
+    23
+  ],
+  "Park Street": [
+    38,
+    25
+  ],
+  "South Station": [
+    43,
+    30
+  ],
+  "Broadway": [
+    45,
+    34
+  ],
+  "Andrew": [
+    45,
+    36
+  ],
+  "JFK/UMass": [
+    45,
+    38
+  ],
+  "Savin Hill": [
+    43,
+    41
+  ],
+  "Fields Corner": [
+    43,
+    43
+  ],
+  "Shawmut": [
+    43,
+    45
+  ],
+  "Ashmont": [
+    43,
+    47
+  ],
+  "North Quincy": [
+    49,
+    42
+  ],
+  "Wollaston": [
+    52,
+    45
+  ],
+  "Quincy Center": [
+    55,
+    48
+  ],
+  "Quincy Adams": [
+    58,
+    51
+  ],
+  "Braintree": [
+    58,
+    55
+  ],
+  "Medford/Tufts": [
+    26,
+    2
+  ],
+  "Ball Square": [
+    28,
+    4
+  ],
+  "Magoun Square": [
+    30,
+    6
+  ],
+  "Gilman Square": [
+    32,
+    8
+  ],
+  "East Somerville": [
+    34,
+    10
+  ],
+  "Union Square": [
+    34,
+    14
+  ],
+  "Lechmere": [
+    38,
+    14
+  ],
+  "Science Park/West End": [
+    40,
+    16
+  ],
+  "Boylston": [
+    36,
+    27
+  ],
+  "Arlington": [
+    33,
+    27
+  ],
+  "Copley": [
+    30,
+    27
+  ],
+  "Hynes Convention Center": [
+    27,
+    27
+  ],
+  "Kenmore": [
+    24,
+    27
+  ],
+  "Prudential": [
+    29,
+    29
+  ],
+  "Symphony": [
+    29,
+    32
+  ],
+  "Northeastern": [
+    28,
+    33
+  ],
+  "Museum of Fine Arts": [
+    27,
+    34
+  ],
+  "Longwood Medical Area": [
+    26,
+    35
+  ],
+  "Brigham Circle": [
+    25,
+    36
+  ],
+  "Fenwood Road": [
+    24,
+    37
+  ],
+  "Mission Park": [
+    23,
+    38
+  ],
+  "Riverway": [
+    22,
+    39
+  ],
+  "Back of the Hill": [
+    21,
+    40
+  ],
+  "Heath Street": [
+    20,
+    41
+  ],
+  "Blandford Street": [
+    23,
+    25
+  ],
+  "BU East": [
+    22,
+    24
+  ],
+  "BU Central": [
+    21,
+    23
+  ],
+  "Amory Street": [
+    20,
+    22
+  ],
+  "Babcock Street": [
+    19,
+    21
+  ],
+  "Packard's Corner": [
+    18,
+    20
+  ],
+  "Harvard Avenue": [
+    16,
+    19
+  ],
+  "Griggs Street": [
+    14,
+    20
+  ],
+  "Allston Street": [
+    13,
+    21
+  ],
+  "Warren Street": [
+    12,
+    22
+  ],
+  "Washington Street": [
+    11,
+    23
+  ],
+  "Sutherland Road": [
+    10,
+    24
+  ],
+  "Chiswick Road": [
+    9,
+    25
+  ],
+  "Chestnut Hill Avenue": [
+    8,
+    26
+  ],
+  "South Street": [
+    7,
+    27
+  ],
+  "Boston College": [
+    5,
+    28
+  ],
+  "Saint Mary's Street": [
+    20,
+    26
+  ],
+  "Hawes Street": [
+    19,
+    25
+  ],
+  "Kent Street": [
+    17,
+    24
+  ],
+  "Saint Paul Street": [
+    15,
+    25
+  ],
+  "Coolidge Corner": [
+    14,
+    26
+  ],
+  "Summit Avenue": [
+    13,
+    27
+  ],
+  "Brandon Hall": [
+    12,
+    28
+  ],
+  "Fairbanks Street": [
+    11,
+    29
+  ],
+  "Washington Square": [
+    10,
+    30
+  ],
+  "Tappan Street": [
+    9,
+    31
+  ],
+  "Dean Road": [
+    8,
+    32
+  ],
+  "Englewood Avenue": [
+    7,
+    33
+  ],
+  "Cleveland Circle": [
+    5,
+    34
+  ],
+  "Fenway": [
+    22,
+    29
+  ],
+  "Longwood": [
+    21,
+    30
+  ],
+  "Brookline Village": [
+    20,
+    31
+  ],
+  "Brookline Hills": [
+    19,
+    32
+  ],
+  "Beaconsfield": [
+    18,
+    33
+  ],
+  "Reservoir": [
+    17,
+    34
+  ],
+  "Chestnut Hill": [
+    16,
+    35
+  ],
+  "Newton Centre": [
+    15,
+    36
+  ],
+  "Newton Highlands": [
+    14,
+    37
+  ],
+  "Eliot": [
+    13,
+    38
+  ],
+  "Waban": [
+    12,
+    39
+  ],
+  "Woodland": [
+    11,
+    40
+  ],
+  "Riverside": [
+    9,
+    41
+  ]
+}

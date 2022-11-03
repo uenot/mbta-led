@@ -1,3 +1,6 @@
+import json
+import pathlib
+
 stop_coordinates = {
     "Wonderland": (62, 7),
     "Revere Beach": (60, 9),
@@ -181,3 +184,19 @@ text = [
 
     (62, 60), (62, 61), (62, 62), (62, 63), (61, 61), (63, 61)
 ]
+
+if __name__ == "__main__":
+    shifted_stops = {k: (x-1, y-1) for k, (x, y) in stop_coordinates.items()}
+    shifted_text = [(x-1, y-1) for (x, y) in text]
+
+    data_path = pathlib.Path('data')
+    data_path.mkdir(parents=True, exist_ok=True)
+
+    with (data_path / 'stops.json').open('w') as f:
+        json.dump(shifted_stops, f, indent=2)
+
+    with (data_path / 'colors.json').open('w') as f:
+        json.dump(colors, f, indent=2)
+    
+    with (data_path / 'text.json').open('w') as f:
+        json.dump(shifted_text, f, indent=2)
