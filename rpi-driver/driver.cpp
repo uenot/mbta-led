@@ -17,7 +17,6 @@ class Matrix {
         void setText();
         std::vector<std::tuple<int, int>> getJson(std::string fp);
         void clear();
-        ~Matrix();
 };
 
 Matrix::Matrix() {
