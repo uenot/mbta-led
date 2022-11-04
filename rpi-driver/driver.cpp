@@ -53,6 +53,7 @@ void Matrix::setText() {
     std::vector<std::tuple<int, int>> points = this->getJson("../data/text.json");
     for (std::tuple<int, int> point : points) {
         this->setPixel(std::get<0>(point), std::get<1>(point), 255, 255, 255);
+        usleep(5*100);
     }
 }
 
