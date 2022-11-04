@@ -10,10 +10,12 @@ using json = nlohmann::json;
 using namespace rgb_matrix;
 
 class Matrix {
+    RGBMatrix *m;
     public:
-        RGBMatrix *m;
         Matrix();
         void setPixel(int x, int y, int r, int g, int b);
+        void setText();
+        std::vector<std::tuple<int, int>> getJson(std::string fp);
 };
 
 Matrix::Matrix() {
@@ -28,9 +30,9 @@ Matrix::Matrix() {
     m = RGBMatrix::CreateFromOptions(defaultOptions, RuntimeOptions());
 }
 
-static std::vector<std::tuple<int, int>> getJson() {
+std::vector<std::tuple<int, int>> Matrix::getJson(std::string fp) {
     std::ifstream f;
-    f.open("data/text.json");
+    f.open(fp);
     json data = json::parse(f);
     std::vector<std::tuple<int,int>> points;
     for (json::iterator iter = data.begin(); iter != data.end(); ++iter) {
@@ -44,6 +46,13 @@ static std::vector<std::tuple<int, int>> getJson() {
 
 void Matrix::setPixel(int x, int y, int r, int g, int b) {
 	m->SetPixel(x, y, r, g, b);
+}
+
+void Matrix::setText() {
+    std::vector<std::tuple<int, int>> points = this->getJson("data/text.json");
+    for (std::tuple<int, int> point : points) {
+        this->setPixel(std::get<0>(point), std::get<1>(point), 255, 255, 255);
+    }
 }
 
 static int createCanvasAndDraw(int x, int y, int r, int g, int b) {
@@ -66,7 +75,7 @@ static int createCanvasAndDraw(int x, int y, int r, int g, int b) {
 
 int main(int argc, char *argv[]) {
 	Matrix mat;
-    mat.setPixel(32, 32, 255, 0, 0);
+    mat.setText();
 	sleep(3);
 }
 
