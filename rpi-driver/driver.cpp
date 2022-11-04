@@ -70,7 +70,10 @@ static int createCanvasAndDraw(int x, int y, int r, int g, int b) {
     defaultOptions.parallel = 1;
     defaultOptions.show_refresh_rate = true;
 
-    Canvas *canvas = RGBMatrix::CreateFromOptions(defaultOptions, RuntimeOptions());
+    RuntimeOptions runtime;
+    runtime.gpio_slowdown = 3;
+
+    Canvas *canvas = RGBMatrix::CreateFromOptions(defaultOptions, runtime);
     if (canvas == NULL) return 1;
     canvas->SetPixel(x, y, r, g, b);
 	sleep(3);
