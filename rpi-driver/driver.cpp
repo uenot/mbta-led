@@ -16,6 +16,8 @@ class Matrix {
         void setPixel(int x, int y, int r, int g, int b);
         void setText();
         std::vector<std::tuple<int, int>> getJson(std::string fp);
+        void clear();
+        ~Matrix();
 };
 
 Matrix::Matrix() {
@@ -55,6 +57,10 @@ void Matrix::setText() {
     }
 }
 
+void Matrix::clear() {
+    m->Clear();
+}
+
 static int createCanvasAndDraw(int x, int y, int r, int g, int b) {
 	RGBMatrix::Options defaultOptions;
     defaultOptions.rows = 64;
@@ -77,5 +83,10 @@ int main(int argc, char *argv[]) {
 	Matrix mat;
     mat.setText();
 	sleep(3);
+    mat.clear();
+    sleep(3);
+    mat.setText();
+	sleep(3);
+    mat.clear();
 }
 
