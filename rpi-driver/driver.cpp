@@ -67,5 +67,6 @@ static int createCanvasAndDraw(int x, int y, int r, int g, int b) {
 int main(int argc, char *argv[]) {
 	Matrix mat;
     mat.setPixel(32, 32, 255, 0, 0);
+	sleep(3);
 }
 
