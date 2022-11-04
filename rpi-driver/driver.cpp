@@ -71,7 +71,7 @@ static int createCanvasAndDraw(int x, int y, int r, int g, int b) {
     defaultOptions.show_refresh_rate = true;
 
     RuntimeOptions runtime;
-    runtime.gpio_slowdown = 3;
+    runtime.gpio_slowdown = 10;
 
     Canvas *canvas = RGBMatrix::CreateFromOptions(defaultOptions, runtime);
     if (canvas == NULL) return 1;
