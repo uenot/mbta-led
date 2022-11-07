@@ -14,4 +14,4 @@ if __name__ == "__main__":
         outline.append([x, y, r, g, b])
 
     with open('data/outline.json', 'w') as f:
-        json.dump(outline, f)
+        json.dump(outline, f, indent=2)
