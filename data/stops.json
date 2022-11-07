@@ -63,7 +63,7 @@
     42,
     8
   ],
-  "Sullivan": [
+  "Sullivan Square": [
     42,
     10
   ],
@@ -207,6 +207,34 @@
     58,
     55
   ],
+  "Cedar Grove": [
+    44,
+    51
+  ],
+  "Butler": [
+    43,
+    53
+  ],
+  "Milton": [
+    41,
+    53
+  ],
+  "Central Avenue": [
+    39,
+    53
+  ],
+  "Valley Road": [
+    37,
+    53
+  ],
+  "Capen Street": [
+    35,
+    53
+  ],
+  "Mattapan": [
+    33,
+    53
+  ],
   "Medford/Tufts": [
     26,
     2
@@ -267,7 +295,7 @@
     29,
     32
   ],
-  "Northeastern": [
+  "Northeastern University": [
     28,
     33
   ],
@@ -307,11 +335,11 @@
     23,
     25
   ],
-  "BU East": [
+  "Boston University East": [
     22,
     24
   ],
-  "BU Central": [
+  "Boston University Central": [
     21,
     23
   ],
