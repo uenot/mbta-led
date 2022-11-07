@@ -44,6 +44,7 @@ class Matrix {
         Matrix();
         void setPixel(const Point p);
         void setText();
+        void setOutline();
         std::vector<Point> getJson(std::string fp);
         void clear();
 };
@@ -86,6 +87,14 @@ void Matrix::setText() {
     }
 }
 
+void Matrix::setOutline() {
+    std::vector<Point> points = this->getJson("../data/outline.json");
+    for (Point p : points) {
+        this->setPixel(p);
+        usleep(5*1000);
+    }
+}
+
 void Matrix::clear() {
     m->Clear();
 }
@@ -93,10 +102,12 @@ void Matrix::clear() {
 int main(int argc, char *argv[]) {
 	Matrix mat;
     mat.setText();
+    mat.setOutline();
 	sleep(3);
     mat.clear();
-    sleep(3);
+    sleep(1);
     mat.setText();
+    mat.setOutline();
 	sleep(3);
     mat.clear();
 }
