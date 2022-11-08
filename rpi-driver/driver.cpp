@@ -91,7 +91,7 @@ void Matrix::setOutline() {
     std::vector<Point> points = this->getJson("../data/outline.json");
     for (Point p : points) {
         this->setPixel(p);
-        usleep(5*1000);
+        usleep(1*1000);
     }
 }
 
