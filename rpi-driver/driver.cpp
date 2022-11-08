@@ -9,10 +9,11 @@
 using json = nlohmann::json;
 using namespace rgb_matrix;
 
-/*refactor code to use Points*/
 struct Point {
     uint8_t x, y, r, g, b;
 };
+
+typedef std::vector<Point> Points; 
 
 void to_json(json& j, const Point& p) {
     j = json{{p.x}, {p.y}, {p.r}, {p.g}, {p.b}};
@@ -40,12 +41,16 @@ void from_json(const json& j, Point& p) {
 
 class Matrix {
     RGBMatrix *m;
+    FrameCanvas *baseCanvas;
+    FrameCanvas *mainCanvas;
+    FrameCanvas *altCanvas;
     public:
         Matrix();
+        void setPixelsToBase(const Points points);
         void setPixel(const Point p);
         void setText();
         void setOutline();
-        std::vector<Point> getJson(std::string fp);
+        Points getJson(std::string fp);
         void clear();
 };
 
@@ -59,13 +64,17 @@ Matrix::Matrix() {
     defaultOptions.show_refresh_rate = true;
 
     m = RGBMatrix::CreateFromOptions(defaultOptions, RuntimeOptions());
+
+    baseCanvas = m->CreateFrameCanvas();
+    mainCanvas = m->CreateFrameCanvas();
+    altCanvas = m->CreateFrameCanvas();
 }
 
-std::vector<Point> Matrix::getJson(std::string fp) {
+Points Matrix::getJson(std::string fp) {
     std::ifstream f;
     f.open(fp);
     json data = json::parse(f);
-    std::vector<Point> points;
+    Points points;
     for (json::iterator iter = data.begin(); iter != data.end(); ++iter) {
         Point p = iter.value().get<Point>();
         points.push_back(p);
@@ -79,8 +88,15 @@ void Matrix::setPixel(const Point p) {
 	m->SetPixel(p.x, p.y, p.r, p.g, p.b);
 }
 
+void Matrix::setPixelsToBase(const Points points) {
+    for (Point p : points) {
+        baseCanvas->SetPixel(p.x, p.y, p.r, p.g, p.b);
+    }
+    m->SwapOnVSync(baseCanvas);
+}
+
 void Matrix::setText() {
-    std::vector<Point> points = this->getJson("../data/text.json");
+    Points points = this->getJson("../data/text.json");
     for (Point p : points) {
         this->setPixel(p);
         usleep(5*1000);
@@ -88,11 +104,8 @@ void Matrix::setText() {
 }
 
 void Matrix::setOutline() {
-    std::vector<Point> points = this->getJson("../data/outline.json");
-    for (Point p : points) {
-        this->setPixel(p);
-        usleep(1*1000);
-    }
+    Points points = this->getJson("../data/outline.json");
+    this->setPixelsToBase(points);
 }
 
 void Matrix::clear() {
