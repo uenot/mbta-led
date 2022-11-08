@@ -11,7 +11,7 @@ if __name__ == "__main__":
         name = stop['name']
         x, y = coords[name]
         r, g, b = colors[stop['line']]
-        outline_coords = [(x+1, y+1), (x+1, y-1), (x-1, y+1), (x-1, y-1)]
+        outline_coords = [(x+1, y), (x-1, y), (x, y+1), (x, y-1)]
         for x_o, y_o in outline_coords:
             outline.append([x_o, y_o, r, g, b])
 
