@@ -44,14 +44,18 @@ class Matrix {
     FrameCanvas *baseCanvas;
     FrameCanvas *mainCanvas;
     FrameCanvas *altCanvas;
+    bool currentCanvas;
     public:
         Matrix();
-        void setPixelsToBase(const Points points);
-        void setPixel(const Point p);
+        void drawToBase(const Points points);
+        void setCanvasesToBase();
+        void drawToMain(const Points points);
+        void swap();
+        void swapToMain();
+        void swapToAlt();
         void setText();
         void setOutline();
         Points getJson(std::string fp);
-        void clear();
 };
 
 Matrix::Matrix() {
@@ -68,6 +72,7 @@ Matrix::Matrix() {
     baseCanvas = m->CreateFrameCanvas();
     mainCanvas = m->CreateFrameCanvas();
     altCanvas = m->CreateFrameCanvas();
+    currentCanvas = false;
 }
 
 Points Matrix::getJson(std::string fp) {
@@ -84,44 +89,64 @@ Points Matrix::getJson(std::string fp) {
     return points;
 }
 
-void Matrix::setPixel(const Point p) {
-	m->SetPixel(p.x, p.y, p.r, p.g, p.b);
-}
-
-void Matrix::setPixelsToBase(const Points points) {
+void Matrix::drawToBase(const Points points) {
     for (Point p : points) {
         baseCanvas->SetPixel(p.x, p.y, p.r, p.g, p.b);
     }
-    m->SwapOnVSync(baseCanvas);
+}
+
+void Matrix::setCanvasesToBase() {
+    mainCanvas->CopyFrom(baseCanvas);
+    altCanvas->CopyFrom(baseCanvas);
+}
+
+void Matrix::swapToMain() {
+    m->SwapOnVSync(mainCanvas);
+    currentCanvas = true;
+}
+
+void Matrix::swapToAlt() {
+    m->SwapOnVSync(altCanvas);
+    currentCanvas = false;
+}
+
+void Matrix::swap() {
+    if (currentCanvas) {
+        this->swapToAlt
+    } else {
+        this->swapToMain
+    }
 }
 
 void Matrix::setText() {
     Points points = this->getJson("../data/text.json");
-    for (Point p : points) {
-        this->setPixel(p);
-        usleep(5*1000);
-    }
+    this->drawToBase(points)
 }
 
 void Matrix::setOutline() {
     Points points = this->getJson("../data/outline.json");
-    this->setPixelsToBase(points);
+    this->drawToBase(points);
 }
 
-void Matrix::clear() {
-    m->Clear();
+void Matrix::drawToMain(const Points points) {
+    for (Point p : points) {
+        mainCanvas->SetPixel(p.x, p.y, p.r, p.g, p.b);
+    }
 }
 
 int main(int argc, char *argv[]) {
 	Matrix mat;
     mat.setText();
     mat.setOutline();
-	sleep(3);
-    mat.clear();
-    sleep(1);
-    mat.setText();
-    mat.setOutline();
-	sleep(3);
-    mat.clear();
+    Points ps;
+    Point p = {32, 32, 255, 0, 255};
+    ps.push_back(p);
+    mat.drawToMain(ps);
+    for (int i=0; i<3; i++) {
+        mat.swapToMain();
+        sleep(3);
+        mat.swap();
+        sleep(3);
+    }
 }
 
